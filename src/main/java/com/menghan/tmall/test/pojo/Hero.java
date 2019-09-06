@@ -76,4 +76,8 @@ public class Hero {
         hero.setHp(hero.getHp() - damage);
         System.out.println(this.name + "攻击了" + hero.getName() + "使后者掉了" + damage + "点血" + ",现在" + hero.getName() + "还有" + hero.getHp() + "多少点血");
     }
+
+    public static void battleWin(){
+        System.out.println("hero比赛赢了");
+    }
 }

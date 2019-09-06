@@ -1,10 +1,7 @@
 package com.menghan.tmall.test.MyTest;
 
 import com.menghan.tmall.test.myInterface.AD;
-import com.menghan.tmall.test.pojo.ADHero;
-import com.menghan.tmall.test.pojo.APADHero;
-import com.menghan.tmall.test.pojo.APHero;
-import com.menghan.tmall.test.pojo.Hero;
+import com.menghan.tmall.test.pojo.*;
 
 public class InheritAndInterface {
     public static void main(String[] args) {
@@ -43,6 +40,20 @@ public class InheritAndInterface {
         AD ad = apadHero;
         ad.physicAttack();
         ((APADHero) ad).magicAttack();
+
+        /**
+         * 重写
+         */
+        new LifePotion().effect();
+
+        /**
+         * 覆写
+         */
+        Hero.battleWin();
+        ADHero.battleWin();
+
+        int hashCode = new Object().hashCode();
+        System.out.println(hashCode);
 
     }
 }

@@ -4,6 +4,14 @@ public class Item {
     String name;
     int price;
 
+    public void buy(){
+        System.out.println("买了这个东西");
+    }
+
+    public void effect(){
+        System.out.println("物品产生影响");
+    }
+
     public String getName() {
         return name;
     }
