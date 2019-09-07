@@ -1,4 +1,4 @@
-package com.menghan.tmall.test.pojo;
+package javaTest.pojo;
 
 /**
  * 饿汉式单例模式

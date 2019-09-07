@@ -1,7 +1,7 @@
-package com.menghan.tmall.test.MyTest;
+package javaTest.MyTest;
 
-import com.menghan.tmall.test.myInterface.AD;
-import com.menghan.tmall.test.pojo.*;
+import javaTest.myInterface.AD;
+import javaTest.pojo.*;
 
 public class InheritAndInterface {
     public static void main(String[] args) {

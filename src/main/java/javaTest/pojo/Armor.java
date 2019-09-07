@@ -1,4 +1,4 @@
-package com.menghan.tmall.test.pojo;
+package javaTest.pojo;
 
 public class Armor extends Item{
 

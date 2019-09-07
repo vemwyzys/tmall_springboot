@@ -1,6 +1,7 @@
-package com.menghan.tmall.test.MyTest;
+package javaTest.MyTest;
 
-import com.menghan.tmall.test.pojo.*;
+
+import javaTest.pojo.*;
 
 public class ClassAndObject {
     public static void main(String[] args) {

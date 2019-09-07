@@ -1,6 +1,6 @@
-package com.menghan.tmall.test.pojo;
+package javaTest.pojo;
 
-import com.menghan.tmall.test.myInterface.AP;
+import javaTest.myInterface.AP;
 
 public class APHero extends Hero implements AP {
     @Override

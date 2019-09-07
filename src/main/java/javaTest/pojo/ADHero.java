@@ -1,6 +1,6 @@
-package com.menghan.tmall.test.pojo;
+package javaTest.pojo;
 
-import com.menghan.tmall.test.myInterface.AD;
+import javaTest.myInterface.AD;
 
 public class ADHero extends Hero implements AD {
     @Override

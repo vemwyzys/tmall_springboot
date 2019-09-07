@@ -1,4 +1,4 @@
-package com.menghan.tmall.test.MyTest;
+package javaTest.MyTest;
 
 public class TestArray {
 

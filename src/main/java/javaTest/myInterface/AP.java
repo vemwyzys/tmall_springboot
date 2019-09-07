@@ -1,4 +1,4 @@
-package com.menghan.tmall.test.myInterface;
+package javaTest.myInterface;
 
 public interface AP {
     /**

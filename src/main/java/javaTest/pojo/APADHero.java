@@ -1,7 +1,7 @@
-package com.menghan.tmall.test.pojo;
+package javaTest.pojo;
 
-import com.menghan.tmall.test.myInterface.AD;
-import com.menghan.tmall.test.myInterface.AP;
+import javaTest.myInterface.AD;
+import javaTest.myInterface.AP;
 
 public class APADHero extends Hero implements AP, AD {
 

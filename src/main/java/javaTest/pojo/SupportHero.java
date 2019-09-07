@@ -1,4 +1,4 @@
-package com.menghan.tmall.test.pojo;
+package javaTest.pojo;
 
 //支援英雄
 public class SupportHero extends Hero {
