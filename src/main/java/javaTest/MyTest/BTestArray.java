@@ -1,6 +1,6 @@
 package javaTest.MyTest;
 
-public class TestArray {
+public class BTestArray {
 
     public static void main(String[] args) {
 
@@ -9,7 +9,7 @@ public class TestArray {
         // 所以要先生成对象的实例，他们才会实际的分配内存空间。
         // 而对于static的对象或方法，在程序载入时便已经分配了内存空间，他只和特定的类想关联，无需实例化。
         // 解决方案：1，本类方法静态，2，生成本类对象调用。
-        TestArray t = new TestArray();
+        BTestArray t = new BTestArray();
 
         //数组初始化
         int[] a = new int[]{100, 200, 300, 5000};

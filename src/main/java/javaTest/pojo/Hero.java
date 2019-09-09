@@ -1,6 +1,8 @@
 package javaTest.pojo;
 
-public class Hero {
+import java.io.Serializable;
+
+public class Hero implements Serializable{
 
     public String name;
 
@@ -34,6 +36,7 @@ public class Hero {
         this.armor = armor;
         this.moveSpeed = moveSpeed;
     }
+
 
     public String getName() {
         return name;
@@ -72,12 +75,21 @@ public class Hero {
         System.out.println("打印this看到的虚拟地址：" + this);
     }
 
-    public void attack(Hero hero, int damage) {
+    public void attack(Hero hero, int damage) throws EnemyHeroIsDeadException{
+        if (hero.hp ==0 ){
+            throw new EnemyHeroIsDeadException(hero.name+"已经死了,不能再进行攻击了");
+        }
         hero.setHp(hero.getHp() - damage);
         System.out.println(this.name + "攻击了" + hero.getName() + "使后者掉了" + damage + "点血" + ",现在" + hero.getName() + "还有" + hero.getHp() + "多少点血");
     }
 
     public static void battleWin(){
         System.out.println("hero比赛赢了");
+    }
+
+    @Override
+    protected void finalize() throws Throwable {
+        System.out.println("触发垃圾回收");
+        super.finalize();
     }
 }

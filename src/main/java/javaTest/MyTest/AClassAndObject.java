@@ -3,7 +3,7 @@ package javaTest.MyTest;
 
 import javaTest.pojo.*;
 
-public class ClassAndObject {
+public class AClassAndObject {
     public static void main(String[] args) {
         Hero hero1 = new Hero();
 
@@ -38,7 +38,11 @@ public class ClassAndObject {
 
         Hero teemo = new Hero("提莫", 1000, 500, 350);
         Hero prince = new Hero("皇子", 2000, 800, 300);
-        teemo.attack(prince, 100);
+        try {
+            teemo.attack(prince, 100);
+        } catch (EnemyHeroIsDeadException e) {
+            e.printStackTrace();
+        }
 
 
         //进行类的属性初始化练习
