@@ -61,6 +61,13 @@ public class StringTest {
         System.out.println(m.capacity());
 
 
+        String str =  null;
+        if (str=="haha"){
+            System.out.println("haha");
+        }
+        if ("haha".equals(str)){
+            System.out.println("haha");
+        }
 
     }
 

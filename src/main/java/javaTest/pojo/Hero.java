@@ -23,6 +23,10 @@ public class Hero implements Serializable{
         System.out.println("实例化一个对象的时候，必然调用构造方法");
     }
 
+    public Hero(String name){
+        this.name = name;
+    }
+
     //构造方法的重载
     public Hero(String name, float hp) {
         this.name = name;
@@ -91,5 +95,15 @@ public class Hero implements Serializable{
     protected void finalize() throws Throwable {
         System.out.println("触发垃圾回收");
         super.finalize();
+    }
+
+    @Override
+    public String toString() {
+        return "Hero{" +
+                "name='" + name + '\'' +
+                ", hp=" + hp +
+                ", armor=" + armor +
+                ", moveSpeed=" + moveSpeed +
+                '}';
     }
 }
