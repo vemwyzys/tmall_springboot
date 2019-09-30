@@ -3,7 +3,7 @@ package javaTest.MyTest;
 import javaTest.myInterface.AD;
 import javaTest.pojo.*;
 
-public class CInheritAndInterface {
+public class _3CInheritAndInterface {
     public static void main(String[] args) {
         ADHero adHero = new ADHero();
         adHero.physicAttack();

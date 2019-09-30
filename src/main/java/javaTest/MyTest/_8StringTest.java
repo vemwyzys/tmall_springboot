@@ -28,7 +28,7 @@ package javaTest.MyTest;
 
  String 的表现就像是一个常量
  */
-public class StringTest {
+public class _8StringTest {
 
     public static void main(String[] args) {
         /**

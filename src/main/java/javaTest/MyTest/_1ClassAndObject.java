@@ -3,7 +3,7 @@ package javaTest.MyTest;
 
 import javaTest.pojo.*;
 
-public class AClassAndObject {
+public class _1ClassAndObject {
     public static void main(String[] args) {
         Hero hero1 = new Hero();
 
@@ -78,5 +78,24 @@ public class AClassAndObject {
          * 3.public static 的 getInstance方法返回第二步的静态属性
          *
          */
+
+
+        //反射
+        String className = "javaTest.pojo.Hero";
+        try {
+
+            Class<?> c1 = Class.forName(className);
+
+            Class<Hero> c2 = Hero.class;
+
+            Class<? extends Hero> c3 = new Hero().getClass();
+
+            System.out.println(c1==c2);
+            System.out.println(c2==c3);
+            System.out.println(c1==c3);
+
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 }

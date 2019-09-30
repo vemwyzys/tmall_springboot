@@ -7,7 +7,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 
-public class ExceptionTest {
+public class _6ExceptionTest {
     public static void main(String[] args) {
 
         //method1();

@@ -2,7 +2,7 @@ package javaTest.pojo;
 
 import java.io.Serializable;
 
-public class Hero implements Serializable{
+public class Hero implements Serializable, Comparable {
 
     public String name;
 
@@ -11,6 +11,8 @@ public class Hero implements Serializable{
     float armor;
 
     int moveSpeed;
+
+    int damage;
     /**
      * 类属性，静态属性
      */
@@ -23,7 +25,7 @@ public class Hero implements Serializable{
         System.out.println("实例化一个对象的时候，必然调用构造方法");
     }
 
-    public Hero(String name){
+    public Hero(String name) {
         this.name = name;
     }
 
@@ -41,6 +43,11 @@ public class Hero implements Serializable{
         this.moveSpeed = moveSpeed;
     }
 
+    public Hero(String name, float hp, int damage) {
+        this.name = name;
+        this.hp = hp;
+        this.damage = damage;
+    }
 
     public String getName() {
         return name;
@@ -79,15 +86,15 @@ public class Hero implements Serializable{
         System.out.println("打印this看到的虚拟地址：" + this);
     }
 
-    public void attack(Hero hero, int damage) throws EnemyHeroIsDeadException{
-        if (hero.hp ==0 ){
-            throw new EnemyHeroIsDeadException(hero.name+"已经死了,不能再进行攻击了");
+    public void attack(Hero hero, int damage) throws EnemyHeroIsDeadException {
+        if (hero.hp == 0) {
+            throw new EnemyHeroIsDeadException(hero.name + "已经死了,不能再进行攻击了");
         }
         hero.setHp(hero.getHp() - damage);
         System.out.println(this.name + "攻击了" + hero.getName() + "使后者掉了" + damage + "点血" + ",现在" + hero.getName() + "还有" + hero.getHp() + "多少点血");
     }
 
-    public static void battleWin(){
+    public static void battleWin() {
         System.out.println("hero比赛赢了");
     }
 
@@ -105,5 +112,35 @@ public class Hero implements Serializable{
                 ", armor=" + armor +
                 ", moveSpeed=" + moveSpeed +
                 '}';
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        Hero h = (Hero) o;
+        if (hp > h.hp)
+            return 1;
+        else return -1;
+    }
+
+    private boolean isDead() {
+        return this.hp <= 0 ? true : false;
+    }
+
+    public void attackHero(Hero h) throws EnemyHeroIsDeadException{
+        h.hp -= damage;
+        System.out.printf("%s在攻击%s,%s的血变成了%.0f %n", name, h.name, h.name, h.hp);
+        if (h.isDead()) {
+            throw new EnemyHeroIsDeadException(h.name + "已经死了,不能再进行攻击了");
+        }
+    }
+
+    public void recover(){
+        hp++;
+    }
+
+    public void hurt(){
+        synchronized (this){
+            hp--;
+        }
     }
 }

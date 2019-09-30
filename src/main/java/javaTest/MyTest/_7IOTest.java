@@ -2,7 +2,7 @@ package javaTest.MyTest;
 
 import java.io.*;
 
-public class IOTest {
+public class _7IOTest {
     public static void main(String[] args) {
 
         //绝对路径
